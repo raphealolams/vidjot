@@ -1,0 +1,23 @@
+{
+  "name": "vidjot",
+  "version": "1.0.0",
+  "description": "this is a simple node.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphealolams/vidjot.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "author": "Ajilore Raphael Olamide < raphealolams@gmail.com >",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphealolams/vidjot/issues"
+  },
+  "homepage": "https://github.com/raphealolams/vidjot#readme"
+}
