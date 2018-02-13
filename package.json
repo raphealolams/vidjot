@@ -2,9 +2,10 @@
   "name": "vidjot",
   "version": "1.0.0",
   "description": "this is a simple node.js app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/raphealolams/vidjot/issues"
   },
-  "homepage": "https://github.com/raphealolams/vidjot#readme"
+  "homepage": "https://github.com/raphealolams/vidjot#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
+  }
 }
