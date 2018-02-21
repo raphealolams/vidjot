@@ -1,6 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const flash = require('flash');
+const session = require('express-session');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 
@@ -29,6 +31,15 @@ app.set('view engine' , 'handlebars');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+// express session middleware
+app.use(session({
+  secret: 'keyboard',
+  resave: true,
+  saveUninitialized: true,
+}))
+
+// Flash usage
 
 // override with POST having ?_method=DELETE
 // middleware
