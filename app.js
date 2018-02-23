@@ -40,6 +40,15 @@ app.use(session({
 }))
 
 // Flash usage
+app.use(flash());
+
+//Use Global variables
+app.use((req , res , next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();  
+})
 
 // override with POST having ?_method=DELETE
 // middleware
@@ -58,7 +67,7 @@ app.get('/ideas' , (req , res) => {
       })
     })
 })
-
+// return objects.reduce((count,o) => count + (o.x == o.y), 0)
 // Add Ideas
 app.get('/ideas/add' , (req , res) => {
   res.render('ideas/add')
