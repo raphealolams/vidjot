@@ -138,7 +138,8 @@ app.delete('/ideas/:id' , (req, res) => {
     _id: req.params.id
   })
     .then(() => {
-      res.redirect('/ideas')      
+      req.flash('success_msg' , 'Video Idea Removed');
+      res.redirect('/ideas');
     })
 })
 
